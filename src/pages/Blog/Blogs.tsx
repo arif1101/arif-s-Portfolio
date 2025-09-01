@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 export default function Blogs() {
   return (
-    <section className="py-28 bg-[#0f172a]">
+    <section className="py-6 md:py-28 bg-[#0f172a]">
       <div className="max-w-6xl mx-auto px-4">
         {/* Back to Home Button */}
         <Link
@@ -14,9 +14,9 @@ export default function Blogs() {
           &larr; Back to Home
         </Link>
 
-        <h2 className="text-4xl font-bold text-blue-400 mb-10 text-center">My Blog</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-blue-400 mb-5 md:mb-10 text-center">My Blog</h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {blogs.map((blog) => (
             <motion.div
               key={blog.id}

@@ -14,7 +14,7 @@ export default function AboutSection() {
         >
           <div className="relative w-80 h-96 rounded-xl overflow-hidden shadow-2xl border border-slate-700">
             <img
-              src="/public/profileImage.JPG"
+              src="./profileImage.JPG"
               alt="Mohi Uddin"
               className="object-cover hover:scale-105 transition-transform duration-500"
             />

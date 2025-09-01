@@ -24,12 +24,12 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-28">
+    <section className="py-6 md:py-28 px-4 md:px-0">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
         {/* Left Side */}
         <div>
-          <h2 className="text-4xl font-bold text-blue-400">Get in Touch</h2>
-          <p className="text-gray-300 text-[18px] mt-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-400">Get in Touch</h2>
+          <p className="text-gray-300 text-base md:text-[18px] mt-2">
             Have a question or want to work together? Drop us a message!
           </p>
 

@@ -4,10 +4,10 @@ import { Book, Laptop } from "lucide-react";
 
 export default function Education() {
   return (
-    <section className="py-22">
-      <div className="text-center mb-16">
-        <h2 className="text-5xl font-bold text-cyan-400">Educational Journey</h2>
-        <p className="text-gray-300 mt-6 max-w-2xl mx-auto text-[18px]">
+    <section className="md:py-22 md:px-0 px-6">
+      <div className="text-center mb-8 md:mb-16">
+        <h2 className="text-[32px] md:text-5xl font-bold text-cyan-400">Educational Journey</h2>
+        <p className="text-gray-300 mt-3 md:mt-6 max-w-2xl mx-auto text-[18px]">
           My Educational Journey Has Been Transformative, Equipping Me With The Expertise
           To Excel In My Field.
         </p>

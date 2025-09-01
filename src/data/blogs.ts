@@ -18,7 +18,7 @@ export const blogs: Blog[] = [
     id: 1,
     title: "5 Tips to Write Cleaner React Code",
     description: "Learn practical techniques to make your React projects more maintainable, readable, and bug-free.",
-    image: "/public/blogs/5tipsReact.webp",
+    image: "/blogs/5tipsReact.webp",
     date: "2025-09-01",
     link: "/blogs/cleaner-react-code",
     fullContent: [
@@ -34,7 +34,7 @@ export const blogs: Blog[] = [
     id: 2,
     title: "Building a Modern Portfolio with React & Tailwind",
     description: "A step-by-step guide on creating a responsive, stylish, and professional portfolio website using React and Tailwind CSS.",
-    image: "/public/blogs/modernPortfolio.png",
+    image: "/blogs/portfolio.png",
     date: "2025-08-28",
     link: "/blogs/modern-portfolio-react-tailwind",
     fullContent: [
@@ -50,7 +50,7 @@ export const blogs: Blog[] = [
     id: 3,
     title: "Understanding MERN Stack for Beginners",
     description: "A beginner-friendly overview of building full-stack applications using MongoDB, Express, React, and Node.js.",
-    image: "/public/blogs/beginerMernStack.jpg",
+    image: "/blogs/beginerMernStack.jpg",
     date: "2025-08-20",
     link: "/blogs/mern-stack-for-beginners",
     fullContent: [
@@ -66,7 +66,7 @@ export const blogs: Blog[] = [
     id: 4,
     title: "Boosting Productivity as a Developer",
     description: "Discover the tools, extensions, and techniques I use daily to stay productive and write better code.",
-    image: "/public/blogs/developerProductivity.jpg",
+    image: "/blogs/developerProductivity.jpg",
     date: "2025-08-15",
     link: "/blogs/developer-productivity-tips",
     fullContent: [

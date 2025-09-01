@@ -35,7 +35,9 @@ export default function Navbar() {
 
           {/* Mobile menu trigger */}
           <div className="md:hidden flex justify-between w-full">
-            <p className="text-xl font-semibold">PortFolio</p>
+            <p className="text-2xl font-semibold text-blue-400">Arif 
+            <span className="inline-block w-2 h-2 rounded-full bg-red-500 ml-2" role="img" aria-label="dot"></span>
+            </p>
             <Popover>
               <PopoverTrigger asChild>
                 <Button
@@ -89,25 +91,25 @@ export default function Navbar() {
           </div>
 
           {/* Desktop nav */}
-<div className="p-[2px] rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 shadow-lg max-md:hidden mx-auto">
-  <NavigationMenu className="rounded-full px-4 py-1.5 bg-gray-900/90 backdrop-blur-md">
-    <NavigationMenuList className="flex gap-2">
-      {navigationLinks.map((link, index) => (
-        <NavigationMenuItem key={index}>
-          <NavigationMenuLink asChild className="flex flex-row">
-            <Link
-              to={link.href}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg text-white font-medium transition-all hover:text-cyan-300 "
-            >
-              {link.icon}
-              {link.label}
-            </Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-      ))}
-    </NavigationMenuList>
-  </NavigationMenu>
-</div>
+          <div className="p-[2px] rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 shadow-lg max-md:hidden mx-auto">
+            <NavigationMenu className="rounded-full px-4 py-1.5 bg-gray-900/90 backdrop-blur-md">
+              <NavigationMenuList className="flex gap-2">
+                {navigationLinks.map((link, index) => (
+                  <NavigationMenuItem key={index}>
+                    <NavigationMenuLink asChild className="flex flex-row">
+                      <Link
+                        to={link.href}
+                        className="flex items-center gap-2 px-4 py-2 rounded-lg text-white font-medium transition-all hover:text-cyan-300 "
+                      >
+                        {link.icon}
+                        {link.label}
+                      </Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                ))}
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
           {/* <NavigationMenu className="max-md:hidden border-2 mx-auto border-cyan-700 rounded-full px-6 py-2.5 bg-gray-900/90 backdrop-blur-md">
             <NavigationMenuList className="gap-4">
               {navigationLinks.map((link, index) => (

@@ -10,10 +10,12 @@ export default function BlogDetails() {
 
   const blog = blogs.find(b => b.link.endsWith(slug));
 
+  console.log(blog?.image)
+
   if (!blog) return <p className="text-white text-center py-20">Blog not found!</p>;
 
   return (
-    <section className="py-28 bg-[#0f172a]">
+    <section className="py-6 md:py-28 bg-[#0f172a]">
       <div className="max-w-4xl mx-auto text-white px-4">
         {/* Back to Blogs Link */}
         <Link
@@ -24,7 +26,7 @@ export default function BlogDetails() {
         </Link>
 
         {/* Blog Header */}
-        <h1 className="text-5xl font-bold mb-4">{blog.title}</h1>
+        <h1 className="text-2xl md:text-5xl font-bold mb-2 md:mb-4">{blog.title}</h1>
         <p className="text-gray-400 mb-6">{blog.date}</p>
         <img
           src={blog.image}
@@ -33,12 +35,12 @@ export default function BlogDetails() {
         />
 
         {/* Blog Description */}
-        <p className="text-gray-300 text-lg mb-8">{blog.description}</p>
+        <p className="text-gray-300 text-base md:text-lg mb-8">{blog.description}</p>
 
         {/* Full Content */}
         {blog.fullContent.map((section, index) => (
           <div key={index} className="mb-8">
-            <h2 className="text-2xl font-semibold mb-3 text-blue-400">
+            <h2 className="text-xl md:text-2xl font-semibold mb-3 text-blue-400">
               {section.heading}
             </h2>
             <p className="text-gray-300 text-base leading-relaxed">
