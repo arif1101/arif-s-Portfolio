@@ -16,24 +16,24 @@ export default function Education() {
       <div className="grid md:grid-cols-2 gap-8 mx-auto">
         <EducationCard
           icon={<Book className="w-6 h-6 text-cyan-400" />}
-          title="Secondary School Certificate (SSC)"
-          institute="Feni Alia Kamil - M.A Madrasah"
+          title="Higher Secondary Certificate (HSC)"
+          institute="Rajgang Degree College, Jessore"
           year="2020"
-          description="Acquired A Strong Foundation In Science And Mathematics, Fostering Analytical And Problem-Solving Skills."
-          gpa="4.0 (Out Of 5)"
+          description="Completed Higher Secondary Certificate (HSC) in Science, building a solid foundation in Physics, Chemistry, and Mathematics while honing analytical and problem-solving abilities."
+          gpa="3.67 (Out Of 5)"
           subject="Science"
           skills={["Mathematics", "Physics", "Chemistry", "Biology"]}
         />
 
         <EducationCard
           icon={<Laptop className="w-6 h-6 text-purple-400" />}
-          title="Diploma In Computer Science (CSE)"
-          institute="Institute Of Computer Science And Technology (ICST)"
+          title="B.Sc. in Computer Science & Engineering"
+          institute="University of Asia Pacific (UAP)"
           year="2020-2024"
           description="Acquired Foundational Knowledge In Computer Science, Programming Languages, And Software Development Principles."
-          gpa="3.47 (Out Of 4)"
+          gpa="3.37 (Out Of 4)"
           subject="Computer Science"
-          skills={["Web Development", "Data Structure", "Database Management Systems"]}
+          skills={["Algorithm","Operating System","Networking", "Web Development", "Data Structure", "Database Management Systems"]}
         />
       </div>
     </section>

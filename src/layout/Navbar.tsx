@@ -11,6 +11,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { Code2, GraduationCap, Home, Laptop, Mail } from "lucide-react";
+import { FaBlog } from "react-icons/fa";
 import { Link } from "react-router"
 
 const navigationLinks = [
@@ -19,6 +20,7 @@ const navigationLinks = [
   { href: "/projects", label: "Projects", icon: <Laptop className="w-4 h-4" /> },
   // { href: "/experience", label: "Experience", icon: <Briefcase className="w-4 h-4" /> },
   { href: "/education", label: "Education", icon: <GraduationCap className="w-4 h-4" /> },
+  { href: "/blogs", label: "Blog", icon: <FaBlog className="w-4 h-4" /> },
   { href: "/contact", label: "Contact", icon: <Mail className="w-4 h-4" /> },
 ];
 

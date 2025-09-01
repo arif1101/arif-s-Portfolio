@@ -1,10 +1,31 @@
+import { useState } from "react";
 import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react";
+import { toast } from "sonner";
 
 export default function Contact() {
+  // Form state
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleContact = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    toast.success("Message sent successfully!");
+    // Reset form
+    setForm({ name: "", email: "", phone: "", subject: "", message: "" });
+  };
+
   return (
     <section className="py-28">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-        
         {/* Left Side */}
         <div>
           <h2 className="text-4xl font-bold text-blue-400">Get in Touch</h2>
@@ -31,7 +52,7 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="text-white font-semibold">Email</h4>
-                <p className="text-gray-300">arifurrahmanarif223@Gmail.Com</p>
+                <p className="text-gray-300">arifurrahmanarif223@gmail.com</p>
               </div>
             </div>
 
@@ -42,7 +63,10 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="text-white font-semibold">LinkedIn</h4>
-                <a href="https://www.linkedin.com/in/arifur-rahman223/" className="text-blue-400 hover:underline">
+                <a
+                  href="https://www.linkedin.com/in/arifur-rahman223/"
+                  className="text-blue-400 hover:underline"
+                >
                   Connect With Me On LinkedIn
                 </a>
               </div>
@@ -55,7 +79,10 @@ export default function Contact() {
               </div>
               <div>
                 <h4 className="text-white font-semibold">GitHub</h4>
-                <a href="https://github.com/arif1101" className="text-blue-400 hover:underline">
+                <a
+                  href="https://github.com/arif1101"
+                  className="text-blue-400 hover:underline"
+                >
                   Check Out My GitHub
                 </a>
               </div>
@@ -79,31 +106,48 @@ export default function Contact() {
           <form className="space-y-4">
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
+              value={form.name}
+              onChange={handleChange}
               className="w-full px-4 py-3 bg-[#1a2234] rounded-lg text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               type="email"
+              name="email"
               placeholder="Your Email"
+              value={form.email}
+              onChange={handleChange}
               className="w-full px-4 py-3 bg-[#1a2234] rounded-lg text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               type="text"
+              name="phone"
               placeholder="Your Phone Number Or WhatsApp Number"
+              value={form.phone}
+              onChange={handleChange}
               className="w-full px-4 py-3 bg-[#1a2234] rounded-lg text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               type="text"
+              name="subject"
               placeholder="Subject"
+              value={form.subject}
+              onChange={handleChange}
               className="w-full px-4 py-3 bg-[#1a2234] rounded-lg text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <textarea
+              name="message"
               placeholder="Your Message"
               rows={5}
+              value={form.message}
+              onChange={handleChange}
               className="w-full px-4 py-3 bg-[#1a2234] rounded-lg text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
             ></textarea>
+
             <button
-              type="submit"
+              onClick={handleContact}
+              type="button"
               className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-90 transition"
             >
               Send Message <Send className="w-4 h-4" />

@@ -1,5 +1,5 @@
-import { Layout, Code, Database, Smartphone, Cloud, Settings, type LucideIcon } from "lucide-react";
-import { SiFigma, SiReact, SiNextdotjs, SiTailwindcss, SiTypescript, SiNodedotjs, SiExpress, SiPostgresql, SiMongodb, SiExpo, SiFlutter, SiSwift, SiAmazon, SiDocker, SiKubernetes } from "react-icons/si";
+import { Code, Database, Settings, type LucideIcon, Cpu, Zap, Box, ListChecks, GitBranch } from "lucide-react";
+import { SiHtml5, SiReact, SiCss3, SiTailwindcss, SiTypescript, SiNodedotjs, SiExpress, SiPostgresql, SiMongodb, SiDaisyui, SiShadcnui, SiSqlalchemy } from "react-icons/si";
 
 export type Tag = {
   label: string;
@@ -16,61 +16,33 @@ export type Tech = {
 export const techData: Tech[] = [
   {
     id: 1,
-    icon: Layout,
-    title: "UI/UX Design",
-    tags: [
-      { label: "Figma", icon: SiFigma },
-      { label: "Responsive Design", icon: Layout }, // placeholder
-      { label: "Wireframing", icon: Layout },
-      { label: "Prototyping", icon: Layout },
-    ],
-  },
-  {
-    id: 2,
     icon: Code,
     title: "Frontend Development",
     tags: [
+      { label: "Html", icon: SiHtml5 },
+      { label: "CSS", icon: SiCss3 },
+      { label: "DaisyUI", icon: SiDaisyui },
+      { label: "ShadCN", icon: SiShadcnui },
       { label: "React", icon: SiReact },
-      { label: "Next.js", icon: SiNextdotjs },
       { label: "TailwindCSS", icon: SiTailwindcss },
       { label: "TypeScript", icon: SiTypescript },
     ],
   },
   {
-    id: 3,
+    id: 2,
     icon: Database,
     title: "Backend Development",
     tags: [
       { label: "Node.js", icon: SiNodedotjs },
       { label: "Express", icon: SiExpress },
       { label: "PostgreSQL", icon: SiPostgresql },
+      { label: "SQL", icon: SiSqlalchemy },
+      { label: "NoSQL", icon: SiSqlalchemy},
       { label: "MongoDB", icon: SiMongodb },
     ],
   },
   {
-    id: 4,
-    icon: Smartphone,
-    title: "Mobile Development",
-    tags: [
-      { label: "React Native", icon: SiReact },
-      { label: "Expo", icon: SiExpo },
-      { label: "Flutter", icon: SiFlutter },
-      { label: "Swift", icon: SiSwift },
-    ],
-  },
-  {
-    id: 5,
-    icon: Cloud,
-    title: "Cloud & DevOps",
-    tags: [
-      { label: "AWS", icon: SiAmazon },
-      { label: "Docker", icon: SiDocker },
-      { label: "Kubernetes", icon: SiKubernetes },
-      { label: "CI/CD", icon: Cloud }, // placeholder
-    ],
-  },
-  {
-    id: 6,
+    id: 3,
     icon: Settings,
     title: "Software Engineering",
     tags: [
@@ -80,6 +52,18 @@ export const techData: Tech[] = [
       { label: "Agile", icon: Settings },
     ],
   },
+{
+  id: 4,
+  icon: Cpu, // overall icon for Problem Solving
+  title: "Problem Solving",
+  tags: [
+    { label: "Algorithms", icon: Zap },          // lightning = fast thinking / algorithms
+    { label: "Data Structures", icon: Box },     // box = container / structure
+    { label: "Logical Thinking", icon: Cpu },    // CPU = brain / logic
+    { label: "Optimization", icon: ListChecks }, // checklist = improving efficiency
+    { label: "Version Control", icon: GitBranch }, // optional tag
+  ],
+}
 ];
 
 

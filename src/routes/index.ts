@@ -1,5 +1,7 @@
 
 import App from "@/App";
+import BlogDetails from "@/pages/Blog/BlogDetails";
+import Blogs from "@/pages/Blog/Blogs";
 import Contact from "@/pages/Contact/Contact";
 import Education from "@/pages/Education/Education";
 import Experience from "@/pages/Experience/Experience";
@@ -39,5 +41,13 @@ export const router = createBrowserRouter([
                 path: "/contact"
             }
         ]
-    }
+    },
+    {
+        Component: Blogs,
+        path: "/blogs"
+    },
+    { 
+        Component: BlogDetails,
+        path: "/blogs/:slug"
+    },
 ])

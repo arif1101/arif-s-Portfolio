@@ -33,31 +33,23 @@ export default function AboutSection() {
           </h2>
 
           <p className="text-gray-300 leading-relaxed">
-            Hello! I'm <span className="text-teal-400 font-semibold">Mohi Uddin</span>, 
-            a passionate JavaScript developer specializing in creating innovative web solutions 
-            and user-friendly interfaces. <span className="text-purple-400">Using React & Next.js Framework</span>, 
+            Hello! I'm <span className="text-teal-400 font-semibold">Arif Rahman,</span>, 
+            a passionate full-stack web developer specializing in building modern, efficient, and user-friendly web applications. With a strong foundation in <span className="text-purple-400"> MERN stack </span>and a keen interest in <span className="text-purple-400"> AI</span> and <span className="text-purple-400"> Machine Learning</span> , I focus on creating solutions that simplify processes and enhance user experiences. 
             I'm dedicated to simplifying development workflows.
           </p>
 
           <p className="text-gray-300 leading-relaxed">
-            My focus is on making web development faster, easier, and accessible to all developers. 
-            Currently, I'm expanding into backend development to grow as a full-stack developer 
-            and create seamless, secure web applications.
+            My mission is to make web development faster, more accessible, and impactful for both developers and users. I enjoy tackling challenging problems and constantly expanding my skills to grow as a versatile, full-stack engineer capable of crafting seamless, secure, and scalable applications.
           </p>
 
           {/* Quote */}
           <blockquote className="border-l-4 border-teal-400 pl-4 italic text-gray-400">
-            I'm a lifelong learner and a dedicated supporter of the developer community, committed 
-            to creating new and effective tools and ideas to empower developers. As the creator of 
-            the Frontend Developer Squad at <span className="text-blue-400">app.daily.dev</span>, I am 
-            championing new technologies to help developers build better and more efficient 
-            applications. I share this knowledge and experience with my community, so that we can 
-            all move forward together.
+            I'm a lifelong learner and an active supporter of the developer community, committed to exploring and sharing the latest tools, technologies, and best practices. I use <span className="text-sky-400"><a href="https://app.daily.dev/">app.daily.dev</a></span> to stay updated on emerging trends, deepen my knowledge, and discover innovative ideas that can improve development workflows. By sharing what I learn and applying it in my projects, I aim to empower fellow developers to grow, innovate, and build better, more efficient applications—so we can all move forward together.
           </blockquote>
 
           <span className="text-sm text-gray-400">
-            — Mohi Uddin, Creator of the Frontend Developer Squad at{" "}
-            <a href="https://app.daily.dev" target="_blank" className="text-blue-400 underline">
+            — Arifur Rahman{" "}
+            <a href="https://app.daily.dev/arif84" target="_blank" className="text-blue-400 underline">
               app.daily.dev
             </a>
           </span>
