@@ -1,6 +1,14 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* index.css */
+:root {
+  overflow-y: auto;
+  scrollbar-gutter: stable; /* prevents layout shift */
+}
+
+
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

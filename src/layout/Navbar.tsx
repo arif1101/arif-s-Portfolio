@@ -10,21 +10,22 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
+import { Code2, GraduationCap, Home, Laptop, Mail } from "lucide-react";
 import { Link } from "react-router"
 
 const navigationLinks = [
-  { href: "/", label: "Home"},
-  { href: "/skills", label: "Skills" },
-  { href: "/projects", label: "Projects" },
-  { href: "/experience", label: "Experience" },
-  { href: "/education", label: "Education" },
-  { href: "/contact", label: "Contact" },
-]
+  { href: "/", label: "Home", icon: <Home className="w-4 h-4" /> },
+  { href: "/skills", label: "Skills", icon: <Code2 className="w-4 h-4" /> },
+  { href: "/projects", label: "Projects", icon: <Laptop className="w-4 h-4" /> },
+  // { href: "/experience", label: "Experience", icon: <Briefcase className="w-4 h-4" /> },
+  { href: "/education", label: "Education", icon: <GraduationCap className="w-4 h-4" /> },
+  { href: "/contact", label: "Contact", icon: <Mail className="w-4 h-4" /> },
+];
 
 export default function Navbar() {
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md transition-all ">
+    <header className="sticky top-3 z-50 transition-all">
       <div className="flex h-16 items-center justify-between px-4 md:px-6">
 
         {/* Center navigation */}
@@ -86,19 +87,38 @@ export default function Navbar() {
           </div>
 
           {/* Desktop nav */}
-          <NavigationMenu className="max-md:hidden border-2 mx-auto border-cyan-700 rounded-full px-6 py-2.5 bg-gray-900/90 backdrop-blur-md">
+<div className="p-[2px] rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 shadow-lg max-md:hidden mx-auto">
+  <NavigationMenu className="rounded-full px-4 py-1.5 bg-gray-900/90 backdrop-blur-md">
+    <NavigationMenuList className="flex gap-2">
+      {navigationLinks.map((link, index) => (
+        <NavigationMenuItem key={index}>
+          <NavigationMenuLink asChild className="flex flex-row">
+            <Link
+              to={link.href}
+              className="flex items-center gap-2 px-4 py-2 rounded-lg text-white font-medium transition-all hover:text-cyan-300 "
+            >
+              {link.icon}
+              {link.label}
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+      ))}
+    </NavigationMenuList>
+  </NavigationMenu>
+</div>
+          {/* <NavigationMenu className="max-md:hidden border-2 mx-auto border-cyan-700 rounded-full px-6 py-2.5 bg-gray-900/90 backdrop-blur-md">
             <NavigationMenuList className="gap-4">
               {navigationLinks.map((link, index) => (
                 <NavigationMenuItem key={index}>
                   <NavigationMenuLink asChild>
-                    <Link to={link.href} className="text-muted-foreground hover:text-primary py-1.5 font-medium">
+                    <Link to={link.href} className="hover:text-primary py-1.5 font-medium text-white">
                     {link.label}
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}
             </NavigationMenuList>
-          </NavigationMenu>
+          </NavigationMenu> */}
         </div>
       </div>
     </header>

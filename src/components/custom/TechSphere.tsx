@@ -12,7 +12,7 @@ export default function TechSphere() {
   ]
 
   return (
-    <div className="flex justify-center items-center h-[500px]">
+    <div className="flex justify-center items-center">
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ repeat: Infinity, duration: 20, ease: "linear" }}

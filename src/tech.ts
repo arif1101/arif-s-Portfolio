@@ -1,10 +1,16 @@
 import { Layout, Code, Database, Smartphone, Cloud, Settings, type LucideIcon } from "lucide-react";
+import { SiFigma, SiReact, SiNextdotjs, SiTailwindcss, SiTypescript, SiNodedotjs, SiExpress, SiPostgresql, SiMongodb, SiExpo, SiFlutter, SiSwift, SiAmazon, SiDocker, SiKubernetes } from "react-icons/si";
+
+export type Tag = {
+  label: string;
+  icon: LucideIcon | React.ComponentType<{ className?: string }>; 
+};
 
 export type Tech = {
   id: number;
-  icon: LucideIcon; // store icon component type, not JSX
+  icon: LucideIcon;
   title: string;
-  tags: string[];
+  tags: Tag[];   // <-- now tags are objects, not strings
 };
 
 export const techData: Tech[] = [
@@ -12,36 +18,68 @@ export const techData: Tech[] = [
     id: 1,
     icon: Layout,
     title: "UI/UX Design",
-    tags: ["Figma", "Responsive Design", "Wireframing", "Prototyping"],
+    tags: [
+      { label: "Figma", icon: SiFigma },
+      { label: "Responsive Design", icon: Layout }, // placeholder
+      { label: "Wireframing", icon: Layout },
+      { label: "Prototyping", icon: Layout },
+    ],
   },
   {
     id: 2,
     icon: Code,
     title: "Frontend Development",
-    tags: ["React", "Next.js", "TailwindCSS", "TypeScript"],
+    tags: [
+      { label: "React", icon: SiReact },
+      { label: "Next.js", icon: SiNextdotjs },
+      { label: "TailwindCSS", icon: SiTailwindcss },
+      { label: "TypeScript", icon: SiTypescript },
+    ],
   },
   {
     id: 3,
     icon: Database,
     title: "Backend Development",
-    tags: ["Node.js", "Express", "PostgreSQL", "MongoDB"],
+    tags: [
+      { label: "Node.js", icon: SiNodedotjs },
+      { label: "Express", icon: SiExpress },
+      { label: "PostgreSQL", icon: SiPostgresql },
+      { label: "MongoDB", icon: SiMongodb },
+    ],
   },
   {
     id: 4,
     icon: Smartphone,
     title: "Mobile Development",
-    tags: ["React Native", "Expo", "Flutter", "Swift"],
+    tags: [
+      { label: "React Native", icon: SiReact },
+      { label: "Expo", icon: SiExpo },
+      { label: "Flutter", icon: SiFlutter },
+      { label: "Swift", icon: SiSwift },
+    ],
   },
   {
     id: 5,
     icon: Cloud,
     title: "Cloud & DevOps",
-    tags: ["AWS", "Docker", "Kubernetes", "CI/CD"],
+    tags: [
+      { label: "AWS", icon: SiAmazon },
+      { label: "Docker", icon: SiDocker },
+      { label: "Kubernetes", icon: SiKubernetes },
+      { label: "CI/CD", icon: Cloud }, // placeholder
+    ],
   },
   {
     id: 6,
     icon: Settings,
     title: "Software Engineering",
-    tags: ["OOP", "Design Patterns", "Testing", "Agile"],
+    tags: [
+      { label: "OOP", icon: Settings },
+      { label: "Design Patterns", icon: Settings },
+      { label: "Testing", icon: Settings },
+      { label: "Agile", icon: Settings },
+    ],
   },
 ];
+
+
