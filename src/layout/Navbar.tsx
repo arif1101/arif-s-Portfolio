@@ -41,7 +41,7 @@ export default function Navbar() {
             <Popover>
               <PopoverTrigger asChild>
                 <Button
-                  className="group size-8"
+                  className="group size-8 bg-blue-500 text-white"
                   variant="ghost"
                   size="icon"
                 >
@@ -78,7 +78,7 @@ export default function Navbar() {
                       <NavigationMenuItem key={index} className="w-full">
                         <NavigationMenuLink
                           href={link.href}
-                          className="py-1.5"
+                          className="py-1.5 text-white"
                         >
                           {link.label}
                         </NavigationMenuLink>

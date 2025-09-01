@@ -22,15 +22,15 @@ export default function ResumeButtons() {
       {/* Preview in Modal */}
       <Dialog>
         <DialogTrigger asChild>
-          <Button variant="outline" className="text-white border-gray-600 hover:bg-gray-800">
+          <Button variant="outline" className="border-gray-600 !bg-black !text-white">
             Preview CV
           </Button>
         </DialogTrigger>
-        <DialogContent className="max-w-4xl h-[90vh] p-0">
+        <DialogContent className="max-w-4xl p-0">
           <DialogHeader className="p-4 border-b">
             <DialogTitle>Resume Preview</DialogTitle>
           </DialogHeader>
-          <div className="w-full h-full">
+          <div className="border w-full h-[600px]">
             <iframe
               src="/resume.pdf"
               className="w-full h-full"
