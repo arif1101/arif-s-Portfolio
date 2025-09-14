@@ -32,10 +32,9 @@ export default function Navbar() {
 
         {/* Center navigation */}
         <div className="flex items-center gap-2 mx-auto w-full ">
-
           {/* Mobile menu trigger */}
           <div className="md:hidden flex justify-between w-full">
-            <p className="text-2xl font-semibold text-blue-400">Arif 
+            <p className="text-2xl font-semibold text-white">Arif 
             <span className="inline-block w-2 h-2 rounded-full bg-red-500 ml-2" role="img" aria-label="dot"></span>
             </p>
             <Popover>

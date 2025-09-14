@@ -1,4 +1,3 @@
-"use client"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -30,7 +29,7 @@ export default function ResumeButtons() {
           <DialogHeader className="p-4 border-b">
             <DialogTitle>Resume Preview</DialogTitle>
           </DialogHeader>
-          <div className="border w-full h-[600px]">
+          <div className="border w-full h-[800px]">
             <iframe
               src="/resume.pdf"
               className="w-full h-full"

@@ -24,7 +24,8 @@ import { projects } from "@/data/projects";
 
 export default function Projects() {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full px-4">
+      <h1 className="text-center md:hidden text-[32px] text-cyan-400 font-bold ">Projects</h1>
       {projects.map((project, index) => (
         <ProjectCard key={project.id} project={project} index={index} />
       ))}

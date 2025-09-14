@@ -19,7 +19,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-    
     <motion.div
       className="h-screen flex items-center justify-center sticky top-0"
       initial={{ opacity: 0, y: 100 }}
@@ -53,7 +52,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
             {/* Links */}
             <div className="flex flex-col mt-auto">
-                <div className="border md:mb-6"></div>
+                <div className="border mb-2 md:mb-6"></div>
                 <div className="flex gap-6">
                 <a
                 href={project.codeLink}
@@ -82,37 +81,37 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
       </div>
     </motion.div>
-{isOpen && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center">
-    <div
-      className="absolute inset-0 bg-black/60"
-      onClick={() => setIsOpen(false)}
-    />
-    <div className="relative bg-[#0f172a] text-white rounded-lg max-w-3xl w-[90vw] max-h-[80vh] overflow-auto p-6 z-10">
-      <h3 className="text-2xl font-bold mb-4">{project.title} Details</h3>
+    
+    {isOpen && (
+      <div className="fixed inset-0 z-50 flex items-center justify-center">
+        <div
+          className="absolute inset-0 bg-black/60"
+          onClick={() => setIsOpen(false)}
+        />
+        <div className="relative bg-[#0f172a] text-white rounded-lg max-w-3xl w-[90vw] max-h-[80vh] overflow-auto p-6 z-10">
+          <h3 className="text-2xl font-bold mb-4">{project.title} Details</h3>
 
-      {project.fullDetails && project.fullDetails.length > 0 ? (
-        <ul className="mb-4 list-disc list-inside space-y-2">
-          {project.fullDetails.map((detail, index) => (
-            <li key={index} className="text-gray-300">
-              {detail}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p className="text-gray-400 mb-4">No additional details available.</p>
-      )}
+          {project.fullDetails && project.fullDetails.length > 0 ? (
+            <ul className="mb-4 list-disc list-inside space-y-2">
+              {project.fullDetails.map((detail, index) => (
+                <li key={index} className="text-gray-300">
+                  {detail}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-gray-400 mb-4">No additional details available.</p>
+          )}
 
-      <button
-        onClick={() => setIsOpen(false)}
-        className="mt-2 px-4 py-2 bg-purple-500 rounded hover:bg-purple-600"
-      >
-        Close
-      </button>
-    </div>
-  </div>
-)}
-
+          <button
+            onClick={() => setIsOpen(false)}
+            className="mt-2 px-4 py-2 bg-purple-500 rounded hover:bg-purple-600"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    )}
     </>
   );
 }
