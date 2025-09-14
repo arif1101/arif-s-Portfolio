@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 export default function AboutSection() {
   return (
     <>
-    <h1 className="text-center text-2xl text-gray-500">about</h1>
+    <h1 className="text-center text-2xl text-gray-500 mt-6 md:mt-0">about</h1>
     <section className="relative py-20 px-6 lg:px-20 bg-[#0d0d25] text-white">
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
